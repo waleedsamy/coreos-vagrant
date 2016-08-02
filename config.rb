@@ -1,5 +1,5 @@
 # Size of the CoreOS cluster created by Vagrant
-$num_instances=1
+$num_instances=4
 
 # Used to fetch a new discovery token for a cluster of size $num_instances
 $new_discovery_url="https://discovery.etcd.io/new?size=#{$num_instances}"
@@ -87,4 +87,4 @@ end
 #$shared_folders = {}
 
 # Enable port forwarding from guest(s) to host machine, syntax is: { 80 => 8080 }, auto correction is enabled by default.
-#$forwarded_ports = {}
+$forwarded_ports = {80 => 80}
